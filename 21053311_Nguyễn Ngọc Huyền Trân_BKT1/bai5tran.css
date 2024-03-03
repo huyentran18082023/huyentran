@@ -1,0 +1,32 @@
+.container{
+    background-image: url(https://img.pikbest.com/wp/202344/freshly-texture-of-roasted-coffee-beans_9938518.jpg!w700wp);
+    max-width: 100%;
+    background-size: cover;
+    margin-top: 100px;
+    height: 300px;
+}
+.header{
+    color: white;
+    font-size: 12px;
+    padding: 40px;
+    font-family: Arial ;
+}
+.content{
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+
+}
+.lienket{
+background-color: red;
+color: white;
+border: 2px solid red;
+border-radius: 2px;
+padding: 10px 20px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+text-decoration: none;
+margin: 10px;
+
+}

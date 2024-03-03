@@ -1,0 +1,42 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://genk.mediacdn.vn/139269124445442048/2022/3/5/stars-in-the-sky-16464831158261870257042.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+}
+.huyentran{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 80px;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.maunen{
+    background-image: url(https://genk.mediacdn.vn/139269124445442048/2022/3/5/stars-in-the-sky-16464831158261870257042.jpg);
+    background-size: cover;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+h3{
+    color: rgb(230, 234, 218);
+    font-weight: cover;
+}
+.huyentran{
+    width: 1200px;
+    justify-items: center;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.at{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,9 @@
+.product-button{
+    display:inline-block;
+    padding: 10px 20px;
+    margin: 10px; 
+    background-color: #333;
+     color: white;
+    text-decoration: none;
+    border-radius: 2px;
+ }

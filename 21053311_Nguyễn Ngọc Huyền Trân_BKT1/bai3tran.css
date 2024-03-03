@@ -1,0 +1,30 @@
+h2{
+    font-size: 35px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#text {
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+ul li {
+    list-style-type: none;
+    }
+.sp2-button{
+        display:inline-block;
+        padding: 10px 20px;
+        background-color: #49a9ed;
+         color: white;
+        border-radius: 2px;
+        text-decoration: none;
+     }
+.textblur {
+        color: transparent;
+        text-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
