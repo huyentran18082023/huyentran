@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(238, 187, 204);
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 50px;
+    background-color:antiquewhite;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.equation {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.result {
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 20em;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 0px;
+}

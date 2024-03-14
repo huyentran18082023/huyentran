@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bai1.css">
+    
+        
+    <title>BÀI 1</title>
+</head>
+<body>
+    <div class="container">
+        <h1>GIẢI PHƯƠNG TRÌNH BẬC I</h1>
+        <div class="equation">
+            <div class="input-group">
+                <input type="number" id="a" name="a" required placeholder="Hệ số a">
+            </div>
+            <div class="input-group">
+                <input type="number" id="b" name="b" required placeholder="Hệ số b">
+            </div>
+            <button id="calculate">Giải Phương Trình</button>
+        </div>
+        <center>KẾT QUẢ</center> 
+        <div id="result" class="result">
+            <span id="result-text"></span>
+        </div>
+    </div>
+
+    <script>
+        const aInput = document.getElementById("a");
+        const bInput = document.getElementById("b");
+        const calculateButton = document.getElementById("calculate");
+        const resultTextElement = document.getElementById("result-text");
+
+        calculateButton.addEventListener("click", () => {
+            const a = parseFloat(aInput.value);
+            const b = parseFloat(bInput.value);
+
+            if (isNaN(a) || isNaN(b)) {
+                resultTextElement.textContent = "Vui lòng nhập các giá trị hợp lệ.";
+                return;
+            }
+
+            if (a === 0) {
+                if (b === 0) {
+                    resultTextElement.textContent = "Phương trình vô số nghiệm.";
+                } else {
+                    resultTextElement.textContent = "Phương trình vô nghiệm.";
+                }
+                return;
+            }
+
+            const x = -b / a;
+
+            resultTextElement.textContent = `Nghiệm x = ${x}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: linear-gradient(to right, #81ceb3 0%, #4668c6 50%, #2a0d9d 100%);
+}
+
+.container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.result-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#bmi-value, #bmi-category {
+    text-align: center;
+    font-size: 18px;
+}
+
+#bmi-value {
+    margin-bottom: 10px;
+}
+
+#bmi-category {
+    font-weight: bold;
+}
+
+/* import java.util.Scanner;
+
+public class BmiCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("TÍNH CHỈ SỐ BMI");
+        System.out.print("Nhập cân nặng? ");
+        double weight = scanner.nextDouble();
+        System.out.print("Nhập chiều cao? ");
+        double height = scanner.nextDouble();
+        System.out.println("Chọn loại tuổi?");
+        System.out.println("Trẻ em, trung niên, già, lớn tuổi");
+        System.out.print("Già, lớn tuổi: ");
+        String ageType = scanner.next();
+
+        double bmi = calculateBmi(weight, height);
+        String bmiCategory = getBmiCategory(bmi);
+
+        System.out.printf("TÍNH BMI%nKẾT QUẢ%n%.2f%n", bmi);
+        System.out.printf("BÉO PHÌ ĐỘ %s%n", bmiCategory);
+
+        if (ageType.equalsIgnoreCase("Già") || ageType.equalsIgnoreCase("Lớn tuổi")) {
+            System.out.println("Hạn chế ăn mỡ động vật.");
+        }
+    }
+
+    private static double calculateBmi(double weight, double height) {
+        return weight / Math.pow(height, 2);
+    }
+
+    private static String getBmiCategory(double bmi) {
+        if (bmi < 18.5) {
+            return "1";
+        } else if (bmi < 24.9) {
+            return "2";
+        } else {
+            return "3";
+        }
+    }
+} */

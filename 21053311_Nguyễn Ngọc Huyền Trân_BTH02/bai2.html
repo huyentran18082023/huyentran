@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đóng góp ý kiến về sản phẩm</title>
+    <link rel="stylesheet" href="bai2.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h1>
+        <small>Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng Việt có dấu</small>
+        <small>Các ý kiến đồng nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm <i>(nếu có).</i></small>
+        <form action="#" onsubmit="return confirmFormSubmit()">
+            <section id="contact">
+            <div class="form-group">
+                <input type="text" id="Ho-ten" name="Ho-ten" required placeholder="Họ và tên">
+            <div class="form-group">
+                <input type="text" id="Ma-the" name="Ma-the" required placeholder="Mã thẻ">
+            </div>
+       
+            </div>
+           
+            <div class="form-group">
+                <input type="text" id="So-dien-thoai" name="So-dien-thoai" required placeholder="Số điện thoại">
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="E-mail">
+            </div>
+      
+            </div>
+            <div class="form-group">
+                <select id="Loai-KH" name="Loai-KH">
+                    <option value="">Chọn loại khách hàng</option>
+                    <option value="VIP">VIP</option>
+                    <option value="VVIP">VVIP</option>
+                    <option value="Normal">Normal</option>
+                </select>
+            <div class="form-group">
+                <input type="text" id="Ma-HD" name="Ma-HD" required placeholder="Nhập mã HD">
+            </div>
+            </div>
+            <div class="form-group2 ">
+                <textarea id="Noi-dung" name="Noi-dung" rows="5" required placeholder="Nhập nội dung góp ý"></textarea>
+            <div class="form-group2">
+                <button type="submit">GỬI GÓP Ý</button>
+            </div>
+        </section>
+        </form>
+
+    </div>
+    <script src="bai2.js"></script>
+</body>
+</html>

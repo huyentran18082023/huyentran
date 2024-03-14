@@ -1,0 +1,124 @@
+
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: auto;
+            display: flex;
+            justify-content: center; /* Căn chỉnh nút theo chiều ngang */
+  align-items: center; /* Căn chỉnh nút theo chiều dọc */
+        }
+
+        .login-form {
+            width: 100%; 
+        }
+
+        .login-button {
+            width: 100%; 
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            color: #fff;
+            width: 180px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            width: 30px;
+            height: 100px;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ea4253;
+        }
+        .button-with-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 10px;
+}
+
+.button-with-icon i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.input-group {
+    position: relative; /* Cài đặt vị trí tương đối cho nhóm đầu vào */
+  }
+  
+  .input-key {
+    /* Kiểu dáng cho trường đầu vào của bạn tại đây */
+    padding-right: 30px; /* Chỉnh sửa khoảng đệm để chứa biểu tượng */
+  }
+  
+  .password-icon {
+    position: absolute; /* Vị trí biểu tượng tuyệt đối */
+    top: 50%; /* Căn chỉnh biểu tượng theo chiều dọc */
+    right: 10px; /* Căn chỉnh biểu tượng sang phải */
+    transform: translateY(-50%); /* Căn chỉnh biểu tượng theo chiều dọc */
+    font-size: 16px; /* Chỉnh sửa kích thước biểu tượng */
+    color: #ccc; /* Chỉnh sửa màu sắc biểu tượng */
+    cursor: pointer; /* Biểu tượng có thể nhấp chuột */
+  }
+  
+  .password-icon:hover {
+    color: #000; /* Thay đổi màu khi di chuột qua */
+  }
+  .username-icon {
+    position: absolute; /* Vị trí biểu tượng tuyệt đối */
+    top: 50%; /* Căn chỉnh biểu tượng theo chiều dọc */
+    right: 10px; /* Căn chỉnh biểu tượng sang phải */
+    transform: translateY(-50%); /* Căn chỉnh biểu tượng theo chiều dọc */
+    font-size: 16px; /* Chỉnh sửa kích thước biểu tượng */
+    color: #ccc; /* Chỉnh sửa màu sắc biểu tượng */
+    cursor: pointer; /* Biểu tượng có thể nhấp chuột */
+  }
+  .username-icon:hover {
+    color: #000; /* Thay đổi màu khi di chuột qua */
