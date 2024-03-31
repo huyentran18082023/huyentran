@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="bai2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <section id="contact">
+        <h1>LIÊN HỆ</h1>
+        <div id="top-color-splash"></div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Thông tin</h2>
+                <div class="info">
+                    <i class="fa fa-map-marker"> Kp.6, P.Linh Trung, Tp.Thủ Đức, TP.HCM</i>
+                    <p></p>
+                </div>
+                <div class="info">
+                    <i class="fa fa-envelope"> infor@edu.vn</i>
+                    <p></p>
+                </div>
+                <div class="info">
+                    <i class="fa fa-phone">+84 2837252002</i>
+                    <p></p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#" onsubmit="return confirmFormSubmit();">
+                    <label for="fullname">Họ và tên:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên">
+                    <br>
+                    <label for="message">Địa chỉ liên hệ</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Nhập tiêu đề"></textarea>
+                    <br>
+
+                    <label for="message">Nhập tiêu đề</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Nhập tiêu đề"></textarea>
+                    <br>
+                    <label for="message">Nội dung:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung"></textarea>
+                    <br>
+                    <button type="submit">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+    function confirmFormSubmit() {
+        var name = document.getElementById("fullname").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phone").value;
+        var feedback = document.getElementById("message").value;
+
+        var message = "Thông tin của bạn:\n\n" +
+            "Họ và tên: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Số điện thoại: " + phoneNumber + "\n" +
+            "Nội dung góp ý: " + feedback;
+
+        if (confirm(message)) {
+            // If user confirms, submit the form
+            return true;
+        } else {
+            // If user cancels, prevent form submission
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>

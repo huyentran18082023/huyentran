@@ -1,0 +1,88 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+.new__card__button {
+    position: absolute;
+    left: 10px;
+    bottom: -50px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+section.laptops {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: left;
+    position: relative;
+}
+
+section.laptops img {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+section.laptops .info {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 4px
+}
+.info ul {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

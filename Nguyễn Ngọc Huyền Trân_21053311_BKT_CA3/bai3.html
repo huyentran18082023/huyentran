@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đánh Giá</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Hiển thị phần tử theo chiều dọc */
+        }
+        
+        .container {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Khoảng cách giữa form và nội dung */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select, textarea {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #reviewResult {
+            width: 50%; /* Giả sử bạn muốn nội dung chiếm 50% chiều rộng của màn hình */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <center><h2>Form Đánh Giá</h2></center>
+    <form id="reviewForm">
+        <label for="name">Tên:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="rating">Đánh Giá:</label>
+        <select id="rating" name="rating" required>
+            <option value="">Chọn mức độ hài lòng</option>
+            <option value="1">1 Sao</option>
+            <option value="2">2 Sao</option>
+            <option value="3">3 Sao</option>
+            <option value="4">4 Sao</option>
+            <option value="5">5 Sao</option>
+        </select>
+        
+        <label for="comment">Nội dung đánh giá:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        
+        <button type="button" id="submitReview">Đánh giá</button>
+    </form>
+</div>
+
+<div id="reviewResult" class="hidden"></div>
+
+<script>
+    document.getElementById('submitReview').addEventListener('click', function() {
+        var name = document.getElementById('name').value;
+        var rating = document.getElementById('rating').value;
+        var comment = document.getElementById('comment').value;
+        
+        var currentDate = new Date();
+        var dateTime = currentDate.toLocaleString('vi-VN');
+        
+        // Thêm ký tự "@" vào phần tên
+        var formattedName = "@" + name;
+        
+        var reviewResult = document.getElementById('reviewResult');
+        var newReview = document.createElement('div');
+        newReview.innerHTML = `<p><strong>Tên:</strong> ${formattedName}</p>
+                               <p><strong>Đánh giá:</strong> ${rating} sao</p>
+                               <p><strong>Nội dung đánh giá:</strong> ${comment}</p>
+                               <p><strong>Ngày và giờ đánh giá:</strong> ${dateTime}</p>`;
+        reviewResult.appendChild(newReview);
+        reviewResult.classList.remove('hidden');
+    });
+</script>
+
+</body>
+</html>
