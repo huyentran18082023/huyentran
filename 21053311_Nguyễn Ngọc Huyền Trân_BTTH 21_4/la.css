@@ -1,0 +1,162 @@
+/* Basic styles for the layout */
+.container {
+    display: flex; /* Flexbox for arranging sections */
+    justify-content: space-between; /* Space between left and right sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+  /* Header styling */
+  /* style.css */
+  /* style.css */
+  .banner {
+    background-color: #b5b2d2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .logo {
+    position: absolute; /* Đặt vị trí logo tuyệt đối */
+    top: 20px; /* Khoảng cách từ logo đến cạnh trên header */
+    left: 20px; /* Khoảng cách từ logo đến cạnh trái header */
+    max-width: 150px; /* Chiều rộng tối đa logo */
+    height: auto; /* Duy trì tỷ lệ khung hình logo */
+  }
+  
+  h1 {
+    margin-left: 100px; /* Khoảng cách từ tiêu đề đến cạnh trái header */
+  }
+  
+  
+  /* Navigation with dropdown */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    position: relative; /* Allows dropdown positioning */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  nav ul li a:hover {
+    background-color: #444;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    top: 100%; /* Ensures dropdown is below parent item */
+    left: 0; /* Ensures dropdown aligns with parent item */
+  }
+  
+  .dropdown li {
+    width: 150px; /* Width of dropdown items */
+  }
+  
+  .dropdown li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .dropdown li a:hover {
+    background-color: #444; /* Hover effect for dropdown items */
+  }
+  
+  /* Show the dropdown when hovering over the parent item */
+  nav ul li:hover .dropdown {
+    display: block; /* Makes the dropdown visible on hover */
+  }
+  
+  /* Layout for main content area */
+  .left-section {
+    flex: 2; /* Larger space for left section */
+    display: flex; /* Use flexbox to stack section and article */
+    flex-direction: column; /* Stack vertically */
+    padding-right: 20px; /* Space between left and right section */
+}
+
+.left-section section, .left-section article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px; /* Space between section and article */
+}
+
+/* Right section containing two asides */
+.right-section {
+    flex: 1; /* Smaller space for right section */
+    display: flex; /* Use flexbox to stack asides */
+    flex-direction: column; /* Stack vertically */
+}
+
+.right-section aside {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 10px; /* Space between the asides */
+}
+
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Changes flex direction for smaller screens */
+    }
+  
+    nav {
+      text-align: center;
+    }
+  
+    nav ul {
+      display: none; /* Initially hides the menu for smaller screens */
+      flex-direction: column; /* Stacks menu items vertically */
+    }
+  
+    nav ul.open {
+      display: block; /* Shows the menu when needed */
+    }
+  
+    /* Handle dropdowns for smaller screens */
+    .dropdown {
+      position: relative; /* Allows dropdown to position correctly */
+      top: auto;
+      left: auto;
+    }
+  
+    aside {
+      padding: 10px;
+    }
+  
+    section,
+    article {
+      padding: 10px;
+    }
+  }
+  

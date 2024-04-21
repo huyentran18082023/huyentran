@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout with Dropdown Menu</title>
+    <link rel="stylesheet" href="la.css">
+</head>
+<body>
+    <!-- Header with a banner -->
+    <header>
+        <div class="banner">
+          <img src="Logo_IUH.png" alt="Logo đại học" class="logo">
+          <h1>Đại Học Công Nghiệp TPHCM</h1>
+        </div>
+      </header>
+      
+
+    <!-- Navigation with a dropdown menu -->
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Đào tạo</a>
+                <ul class="dropdown">
+                    <li><a href="#">Đồ họa</a></li>
+                    <li><a href="#">Web</a></li>
+                    <li><a href="#">Mạng</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ</a>
+                <ul class="dropdown">
+                    <li><a href="#">Tin học</a></li>
+                    <li><a href="#">TOICE</a></li>
+                    <li><a href="#">Tuyển sinh</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên hệ</a>
+                <ul class="dropdown">
+                    <li><a href="#">Công tác sinh viên</a></li>
+                    <li><a href="#">Phòng đào tạo</a></li>
+                    <li><a href="#">Hỗ trợ sinh viên</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main content area with an article on the right and aside on the left -->
+    <div class="container">
+        <!-- Left side containing section and article -->
+        <div class="left-section">
+            <section>
+                <h2>Triết lý giáo dục của trường đại học Công Nghiệp TPHCM</h2>
+                <img src="images.jpg" alt="Mô tả hình ảnh">
+                <p>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh là một trường đại học định hướng ứng dụng và thực hành, trực thuộc Bộ Công Thương, chuyên đào tạo nhóm ngành kinh tế công nghiệp và kỹ thuật công nghiệp, được thành lập từ ngày 24 tháng 12 năm 2004. </p>
+              
+                
+              </section>
+            <article>
+                <h2>Tầm nhìn sứ mệnh</h2>
+                <img src="logos.jpg" alt="Mô tả hình ảnh">
+                <p>Trở thành Trường đại học hàng đầu của Việt Nam, tiên phong trong lĩnh vực giáo dục và nghiên cứu ứng dụng, chuyển giao công nghệ và đổi mới sáng tạo:
+
+                    Trở thành Trường đại học hàng đầu của Việt Nam: đứng trong tốp 10 các trường đại học trong nước;
+                    Tiên phong trong lĩnh vực giáo dục và nghiên cứu ứng dụng: các chương trình đào tạo được tiếp cận theo hướng ứng dụng, đáp ứng được yêu cầu thực tiễn của xã hội;
+                    Chuyển giao công nghệ và đổi mới sáng tạo: phát triển ý tưởng mới, cải tiến, sáng tạo trong lĩnh vực chuyển giao công nghệ, ươm mầm doanh nghiệp, hợp tác và thương mại hóa sản phẩm khoa học..</p>
+            </article>
+        </div>
+        
+        <!-- Right side containing two asides -->
+        <div class="right-section">
+            <aside>
+                <h3>Mục tiêu chung</h3>
+                <p>Xây dựng công nghệ quản lý hiện đại, hoàn thành cơ bản các điều kiện đáp ứng yêu cầu đào tạo nguồn nhân lực chất lượng cao đóng góp cho xã hội, tạo ra giá trị thực tiễn và hiệu quả từ hoạt động nghiên cứu khoa học và chuyển giao công nghệ, hợp tác quốc tế.</p>
+            </aside>
+            <aside>
+                <h3>Sứ mạng</h3>
+                <p>Cung cấp nguồn nhân lực chất lượng cao, có năng lực, phẩm chất và hội nhập quốc tế nhằm đóng góp cho sự phát triển kinh tế xã hội của đất nước</p>
+            </aside>
+        </div>
+    </div>
+      
+      
+
+    <!-- Footer at the bottom -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Công ty ABC. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").toggle("slow");
+    });
+    });
+    </script>
+
+</body>
+</html>
