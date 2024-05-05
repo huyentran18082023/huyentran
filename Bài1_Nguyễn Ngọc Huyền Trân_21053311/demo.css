@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #242e5a; /* Thay đổi màu nền cho header */
+    z-index: 1000; /* Đảm bảo header nằm trên cùng */
+  }
+  
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 260px;
+    height: 50px;
+    float: right;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none; /* Loại bỏ dấu chấm */
+    font-size: larger;
+  }
+  
+  .nav-menu li {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #e2dcdc;
+  }
+  
+  .hambuger {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    display: none; /* Ẩn menu dropdown mặc định */
+    position: absolute; /* Đặt vị trí là tuyệt đối */
+    top: 100%; /* Hiển thị menu dropdown phía dưới */
+    left: 0;
+    height: 120px;
+    width: 150px; /* Độ rộng của menu dropdown */
+    background-color: #281aa1; /* Màu nền của menu dropdown */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho menu dropdown */
+    z-index: 10; /* Đảm bảo menu dropdown hiển thị trên cùng */
+    color:#222222;
+  
+  }
+
+  .dropdown-menu li {
+    list-style: none; /* Remove bullet point */
+  }
+  
+  .dropdown-menu a {
+    text-decoration: none; /* Remove underline */
+    color: #f3f4f6;
+    display: block;
+    padding: 10px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #281aa1;  /* thống nhất với màu  /* Màu nền khi di chuột qua menu item */ 
+    color:#222222;
+  }
+
+  
+  .menu-item:hover .dropdown-menu {
+    display: block; /* Hiển thị menu dropdown khi di chuột qua menu item */
+    
+  }
+  
+  /* CSS cho menu item */
+  .menu-item {
+    position: relative; /* Đặt vị trí là tương đối */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #f8f2f2;
+    display: block; /* Hiển thị dạng block để có thể đặt chiều rộng và cao độ */
+    padding: 10px; /* Khoảng cách bên trong menu item */
+  }
+  
+  .nav-link:hover {
+    background-color: #281aa1; /* Màu nền khi di chuột qua menu item */
+    color: rgb(234, 230, 230); 
+  }
+  
+
+  
+  
+
+
+/*--------------header--------*/
+/*--------------home--------*/
+.home .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.home .text {
+  max-width: 50%;
+  color: white;
+  margin: 15% 0 0 10%;
+}
+
+.home h1 {
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.home p {
+  font-weight: 400;
+  line-height: 25px;
+  font-family: sans-serif;
+  font-size: 17px;
+  margin: 50px 0 0 50px;
+}
+
+button {
+  padding: 10px 20px;
+  background: none;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  margin-top: 10px;
+}
+
+.home button {
+  margin-left: 0px;
+}
+
+.home .image_item {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.home .image_item img {
+  width: 140px;
+  height: 94px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.home .image_item img.active {
+  border: 2px solid white;
+}
+
+.home .box .text {
+  position: relative;
+ 
+  margin-bottom: 20px; /* Điều chỉnh khoảng cách phía dưới */
+}
+
+
+
+
+
+/*--------------home--------*/
+/*--------------book--------*/
+.flex {
+  display: flex;
+  
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.book {
+  margin-top: 45px;
+  width: 100%;
+  height: 10px;
+  color: white;
+  padding: 180px 25px;
+ 
+  
+}
+
+.book .input {
+  background: #242e5a;
+  padding: 20px 20px 40px 20px;
+
+}
+
+.book .search {
+  background: #3f9cc1;
+  padding: 20px;
+}
+
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  background: #263760;
+  margin-top: 20px;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.box.room-type {
+  background: #242e5a;
+  
+}
+
+.box.room-type select  {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  background: #263760;
+  margin-top: 20px;
+  color: white;
+}
+
+.book .search {
+  width: 20%;
+}
+
+
+
+.book .search input {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.search {
+  text-align: center; /* Để căn giữa nội dung */
+}
+
+.search a {
+  display: inline-block; /* Để khung chứa chữ có kích thước tự điều chỉnh dựa trên nội dung */
+  padding: 10px 20px; /* Kích thước của nút */
+  border: 2px solid #fff; /* Đường viền */
+  border-radius: 5px; /* Độ cong của các góc */
+  text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+  color: #fff; /* Màu chữ */
+  margin-top: 42px;
+}
+
+.search a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Màu nền khi hover */
+}
+
+/*--------------book--------*/
+/*--------------about--------*/
+.top {
+  margin-top: 1%;
+}
+
+.mtop {
+  margin-top: 0%;
+}
+
+.left, .right {
+  width: 50%;
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about .img {
+  position: relative;
+}
+
+.about .image1 {
+  width: 310px;
+  height: 450px;
+  z-index:1;
+}
+
+.about .image2 {
+  width: 325px;
+  height: 220px;
+  position: absolute;
+  bottom: 5px;
+  z-index: 2;
+  right: 30%;
+}
+
+.about .image3 {
+  top:50px;
+  width: 250px;
+  height: 320px;
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  right: 10%;
+}
+
+.heading {
+  position: relative;
+}
+
+.heading::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: #C1B086;
+}
+
+.heading h5 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding-top: 20px;
+  color: #5f5f5f;
+}
+
+.heading h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 20px 0 20px 0;
+  color: #222222;
+}
+
+.heading p {
+  margin-bottom: 20px;
+  line-height: 25px;
+  color: #5f5f5f;
+  margin: 0 0 20px 50px;
+}
+
+.heading .btn1 {
+  margin: 50px 0 20px 50px;
+}
+
+
+
+/* các nút button */
+.btn-book-room {
+  background-color: transparent; /* Màu nền trong suốt */
+  color: rgb(255, 255, 255);
+  border: none; /* Loại bỏ viền */
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng cho box-shadow */
+  box-shadow: 0 0 0 2px rgb(255, 255, 255) inset; /* Viền trắng */
+  margin-bottom: 100px; /* Khoảng cách dưới */
+  text-decoration: none;
+}
+
+.btn-book-room:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Màu nền xám trong suốt khi hover */
+  color: white; /* Màu chữ trắng */
+  box-shadow: 0 0 0 2px white inset, 0 0 10px rgba(0, 0, 0, 0.2); /* Hiển thị viền trắng và tạo hiệu ứng nhấp nháy */
+}
+
+
+
+.btn1 {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn1:hover {
+  background-color: #4CAF50; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+}
+
+.btn2 {
+  background-color: #e3c067;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  color:rgb(253, 252, 252);
+}
+
+.btn2:hover {
+  background-color: #4CAF50; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+}
+/*--------------about--------*/
+/*--------------wrapper--------*/
+.wrapper {
+  background-image: url("../image/ami.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 480px;
+  position: relative;
+  
+}
+
+.wrapper .text {
+  background: #3f9cc1;
+  padding: 50px;
+  width: 40%;
+  height: 550px;
+  position: absolute;
+  top: -5%;
+  right: 10%;
+  padding-top: 5%;
+  color: white;
+}
+
+.wrapper .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+}
+
+.wrapper h2 {
+  font-weight: 400;
+}
+
+.wrapper p {
+  margin: 20px 0 50px 0;
+  line-height: 30px;
+}
+
+.wrapper i {
+  margin: 5px 20px 0 0;
+}
+
+/*--------------wrapper--------*/
+/*--------------room--------*/
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.room img {
+  width: 100%;
+  height: 100%;
+}
+
+.room .box {
+  box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
+}
+
+.room .text {
+  padding: 20px;
+}
+
+.room h3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.room p span {
+  font-size: 12px;
+  color: grey;
+}
+
+.room p {
+  font-size: 20px;
+}
+
+
+/* CSS cho hiệu ứng overlay khi hover */
+/* CSS cho hiệu ứng overlay khi hover */
+.img {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay a {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+}
+
+.box:hover .img img {
+  transform: scale(1.1);
+}
+
+.box:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+/*--------------room--------*/
+/*--------------wrapper2--------*/
+
+/* CSS cho hiệu ứng hiện lên */
+/* Hoạt hình chữ hiện lên từ dưới */
+.swan-resort {
+  background-image: url("../image/w1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 40px;
+}
+
+.swan-resort .text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0; /* Bắt đầu ở trạng thái ẩn */
+  transform: translateY(20px); /* Di chuyển xuống */
+  transition: opacity 0.5s, transform 0.5s; /* Hiệu ứng chuyển đổi */
+}
+
+.swan-resort h2 {
+  font-size: 120px;
+  font-weight: 700;
+}
+
+.swan-resort p {
+  font-size: 46px;
+  margin-top: 10px; /* Khoảng cách giữa tiêu đề và văn bản mô tả */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------wrapper2--------*/
+/*--------------restaurant--------*/
+.restaurant img {
+  width: 110%;
+  height: 90%;
+  margin-top: 30px;
+}
+
+.restaurant .right {
+  padding: 30px 50px 50px 100px;
+}
+
+.restaurant h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.restaurant .text p {
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+
+.accordionItem {
+  margin-top: 30px;
+}
+
+.accordionItem p {
+  font-size: 15px;
+  opacity: 0.8;
+  font-family: sans-serif;
+  line-height: 20px;
+}
+
+.accordionIHeading {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #C1B086;
+  margin-bottom: 20px;
+}
+
+.close .accordionItemContent {
+  height: 0px;
+  transition: height 1s ease-out;
+  transform: scaleY(0);
+  float: left;
+  display: block;
+  background-color: #fff;
+}
+
+.open .accordionItemContent {
+  padding: 30px;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 0 10px 0;
+  display: block;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  box-sizing: border-box;
+  box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+}
+
+/*--------------restaurant--------*/
+/*--------------gallary--------*/
+.gallary img {
+  width: 270px;
+  height: 350px;
+}
+
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+  top: 35%;
+  background: white !important;
+  transition: 0.5s;
+}
+
+.owl-carousel .owl-prev {
+  left: 33px;
+}
+
+.owl-carousel .owl-next {
+  right: 33px;
+}
+
+.owl-carousel .owl-next:hover,
+.owl-carousel .owl-prev:hover {
+  background: #C1B086 !important;
+}
+
+/*--------------gallary--------*/
+/*--------------map--------*/
+.map iframe {
+  width: 100%;
+}
+
+/*--------------map--------*/
+/*--------------footer--------*/
+
+footer {
+  background-color: #242e5a; /* Màu nền cho footer */
+  padding-top: 6px;
+}
+footer h3 {
+  margin-bottom: 20px;
+  color:rgb(234, 230, 230)
+}
+
+footer li {
+  margin-bottom: 15px;
+  transition: 0.5s;
+  color:rgb(234, 230, 230)
+}
+
+footer li:hover {
+  color: #C1B086;
+  cursor: pointer;
+}
+
+.news-link {
+  text-decoration: none; /* Không gạch chân */
+  color: rgb(243, 243, 245); /* Màu chữ */
+}
+
+.news-link:hover {
+  color: #C1B086;/* Màu khi hover */
+}
+
+.list-link {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: rgb(243, 243, 245);
+}
+
+.list-link:hover {
+  color: #C1B086;/* Màu khi hover */
+}
+/*--------------footer--------*/
+@media only screen and (max-width:768px) {
+  .home .box .text {
+    max-width: 100%;
+  }
+
+  .home .box .text::after,
+  .home .image_item {
+    display: none;
+  }
+
+  .restaurant .container,
+  .about .container,
+  .book .container {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .book {
+    margin-top: 10%;
+    height: auto;
+  }
+
+  .book .search {
+    width: 100%;
+  }
+
+  .book .search input {
+    margin-top: 0;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .wrapper .text {
+    width: 80%;
+  }
+
+  .room {
+    margin-bottom: 100px;
+  }
+
+  .room .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .restaurant .right {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  footer .payment {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home .text {
+    margin: 10% 0 0 0;
+  }
+
+  .home h1 {
+    font-size: 40px;
+  }
+
+  .about p,
+  .home p {
+    margin: 50px 0 0 0;
+  }
+
+  .wrapper .text {
+    padding: 10px;
+    height: 600px;
+  }
+
+  .heading_top {
+    margin-top: 100px;
+  }
+
+  .heading_top button {
+    display: none;
+  }
+
+  .restaurant .flex {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Khởi đầu với trạng thái ẩn */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* Dịch chuyển từ dưới lên */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Trạng thái khi phần tử được quan sát */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

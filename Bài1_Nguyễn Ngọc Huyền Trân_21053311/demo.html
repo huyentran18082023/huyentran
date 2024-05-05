@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>SWAN RESORT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js"></script>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+          <nav>
+            <a href="#" class="logo">
+              <img src="image/logo.png" alt="" style="width: 260px; height: 50px; float: right;">
+            </a>
+      
+           
+      
+            <ul class="nav-menu">
+              <li class="menu-item">
+                <a href="demo.html" class="nav-link">Trang Chủ</a>
+              </li>
+              <li class="menu-item">
+                <a href="web.html" class="nav-link">Nhà Hàng</a>
+                
+              </li>
+              <li class="menu-item">
+                <a href="Moi.html" class="nav-link">Lưu Trú</a>
+               
+              </li>
+              <li class="menu-item">
+                <a href="#gallery" class="nav-link">Tin Tức</a>
+                <ul class="dropdown-menu">
+                  <li><a href="tintuc.html">Tin Tức </a></li>
+                  <li><a href="uudai.html">Ưu Đãi</a></li>
+                 
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="lienhedp.html" class="nav-link">Liên hệ</a>
+              </li>
+              <li class="menu-item">
+                <a href="datphong1.html" class="nav-link">Đặt Phòng</a>
+              </li>
+              
+
+              
+            </ul>
+      
+          </nav>
+        </div>
+      </header>
+      
+ 
+
+      <section class="home" id="home">
+        <div class="head_container">
+          <div class="box">
+            <div class="text">
+              <h1 class="fade-in"> WELCOME TO SWAN RESORT</h1>
+              <a href="datphong1.html" class="btn-book-room">ĐẶT PHÒNG</a>
+            </div>
+          </div>
+          <div class="image">
+            <img src="image/home1.jpg" class="slide large-image">
+          </div>
+          <div class="image_item">
+            <img src="image/home1.jpg" alt="" class="slide active" onclick="changeImage('image/home1.jpg')">
+            <img src="image/home2.jpg" alt="" class="slide" onclick="changeImage('image/home2.jpg')">
+            <img src="image/home3.jpg" alt="" class="slide" onclick="changeImage('image/home3.jpg')">
+            <img src="image/home4.jpg" alt="" class="slide" onclick="changeImage('image/home4.jpg')">
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.slide');
+        const largeImage = document.querySelector('.large-image');
+        const intervalTime = 1700; 
+      
+        function startSlide() {
+          setInterval(() => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+            largeImage.src = images[currentImageIndex].src;
+          }, intervalTime);
+        }
+      
+        function changeImage(imgSrc) {
+          largeImage.src = imgSrc;
+        }
+      
+        startSlide();
+      </script>
+      
+      
+      
+  
+  <!-- BOX ĐĂNG KÝ ĐẶT PHÒNG NHANH  -->
+
+  <section class="book">
+    <div class="container flex">
+        <div class="input grid">
+            <div class="box">
+                <label for="check-in">Ngày đi:</label>
+                <input type="date" id="check-in" placeholder="Check-in Date">
+            </div>
+            <div class="box">
+                <label for="check-out">Ngày rời:</label>
+                <input type="date" id="check-out" placeholder="Check-out Date">
+            </div>
+            <div class="box">
+                <label for="adults">Số lượng khách:</label>
+                <input type="number" id="adults" placeholder="0">
+            </div>
+            <div class="box room-type">
+                <label for="room-type">Loại Phòng:</label>
+                <select name="room-type" id="room-type">
+                    <option value="standard">One Bed</option>
+                    <option value="deluxe">Ocen View</option>
+                    <option value="suite">Imperial Suite</option>
+                </select>
+            </div>
+        </div>
+        <div class="search">
+          <a href="Moi.html" id="search-btn">Tìm kiếm</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- vào phần nội dung các phần -->
+    
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+          <img src="image/a3.webp" alt="" class="image3">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5 class="fade-in">TRẢI NGHIỆM CẢM GIÁC THƯỢNG LƯU VÀ ĐẦY SANG TRỌNG </h5>
+          <h2 class="fade-in">Chào Mừng Bạn Đến Với Swan Resort</h2>
+          <p class="fade-in">Swan resort  là một khu nghỉ dưỡng sang trọng 5 sao tọa lạc tại Bãi Dài, Phú Quốc, Việt Nam. Khu nghỉ dưỡng sở hữu vị trí đắc địa, ngay bên bờ biển với bãi cát trắng mịn, làn nước trong xanh và khung cảnh thiên nhiên thơ mộng.
+          </p>
+          <p class="fade-in">Hãy dùng bữa với hải sản tươi sống nhìn ra biển khi lưu trú tại khu nghỉ dưỡng của chúng tôi ở Phú Quốc. Tham gia vào cảnh lướt ván diều nổi tiếng và các hoạt động giải trí </p>
+          <p class="fade-in">Nếu bạn có cơ hội đến thăm Phú Quốc và nghỉ dưỡng tại Swan Resort, chắc chắn bạn sẽ có nhiều trải nghiệm thú vị và đáng nhớ. </p>
+          <br>
+          <div class="button">
+            <a href="Moi.html" class="btn2">ĐẾN LƯU TRÚ</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2 class="fade-in"><strong>CÁC ƯU ĐÃI TẠI SWAN RESORT</strong></h2>
+        <p class="fade-in">Swan Resort mang đến các ưu đãi đặc biệt với các dịch vụ nghỉ dưỡng linh hoạt và chuyên nghiệp. Tận hưởng không gian sang trọng của phòng nghỉ và biệt thự, thư giãn tại spa và khu tắm nước. Khám phá các hoạt động giải trí và cam kết mang đến trải nghiệm nghỉ dưỡng đẳng cấp và không quên trong lòng của quý khách. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span class="fade-in">Nơi Ở Và Khám Phá</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span class="fade-in">Spa Không Giới Hạn</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span class="fade-in">Ưu đãi khi đặt phòng trước</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span class="fade-in">Hoạt động giải trí</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span class="fade-in">Ưu đãi cho khách hàng lưu trú lâu dài</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span class="fade-in">Ưu đãi cho khách hàng thân thiết</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="room top" id="room">
+    <div class="container">
+        <div class="heading_top flex1">
+            <div class="heading">
+                <h5 class="fade-in"> TẬN HƯỞNG CẢM GIÁC XA HOA TẠI NƠI NGHĨ DƯỠNG </h5>
+                <h2 class="fade-in">LƯU TRÚ</h2>
+            </div>
+           
+        </div>
+
+        <div class="content grid">
+            <div class="box">
+                <a href="Moi.html" class="box-link">
+                    <div class="img">
+                        <img src="image/r1.jpg" alt="">
+                        <div class="overlay">
+                            <a href="datphong1.html">Đặt phòng</a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3 class="fade-in">One Bed</h3>
+                        <p class="fade-in"> 4.000.000 <span class="fade-in">/Một ngày</span> </p>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="Moi.html" class="box-link">
+                    <div class="img">
+                        <img src="image/r2.jpg" alt="">
+                        <div class="overlay">
+                            <a href="datphong1.html">Đặt phòng</a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3 class="fade-in" >Ocen View</h3>
+                        <p class="fade-in"> 8.000.000 <span class="fade-in">/Một ngày</span> </p>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="Moi.html" class="box-link">
+                    <div class="img">
+                        <img src="image/r3.jpg" alt="">
+                        <div class="overlay">
+                            <a href="datphong1.html">Đặt phòng</a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3 class="fade-in" >Imperial Suite</h3>
+                        <p class="fade-in"> 10.000.000<span class="fade-in">/Một ngày</span> </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+  
+  <!-- Wrapper section -->
+  <!-- HTML -->
+<section class="swan-resort">
+  <div class="container">
+    <div class="text">
+      <h2>SWAN RESORT</h2>
+      <p class="fade-in-text">Tận hưởng cảm giác thượng lưu và sang trọng</p>
+    </div>
+  </div>
+</section>
+
+
+
+       
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text" style="width:450px;">
+          <h2 class="fade-in">NHÀ HÀNG</h2>
+          <p class="fade-in">Khám phá một thế giới của hương vị độc đáo và trải nghiệm không gian sang trọng và ấm cúng tại nhà hàng</p>
+        </div>
+        <div class="accordionWrapper" style="width:450px;">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Nhà hàng Sky Bar</h2>
+            <div class="accordionItemContent">
+              <p>Trải nghiệm ẩm thực đa dạng và độc đáo tại nhà hàng Sun Swan, nơi bạn có thể thưởng thức các món ăn từ khắp nơi trên thế giới. Không gian tại đây ấm áp và thoải mái, tạo điều kiện lý tưởng để bạn thư giãn và tận hưởng bữa ăn của mình. Hãy đến và khám phá sự kết hợp hài hòa giữa ẩm thực và không gian tại Sky Bar.
+
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Nhà hàng Seapool</h2>
+            <div class="accordionItemContent">
+              <p>Seapool là điểm đến lý tưởng cho du khách muốn thư giãn và tận hưởng không gian yên bình bên bể bơi. Tại đây, bạn có thể thả mình vào làn nước mát lạnh, lắng nghe tiếng sóng vỗ nhẹ và tận hưởng khung cảnh thiên nhiên tuyệt đẹp xung quanh. Hãy đến và trải nghiệm những khoảnh khắc thư giãn khó quên tại Seapool.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Nhà hàng Sun Swan</h2>
+            <div class="accordionItemContent">
+              <p>Hãy đến Sun Swan để thưởng thức ẩm thực tinh tế và tạo ra những kỷ niệm đáng nhớ. Tại đây, bạn sẽ được thưởng thức các món ăn đa dạng từ các nền ẩm thực khác nhau, được chế biến bởi những đầu bếp tài năng. Sun Swan cũng cung cấp một không gian hiện đại, sang trọng, hoàn hảo cho mọi dịp đặc biệt.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Các nhà hàng nổi tiếng tại Phú Quốc</h2>
+            <div class="accordionItemContent">
+              <p>
+                <ul>
+                  <li>The Pepper Tree Restaurant</li>
+                  <li>Crab House</li>
+                  <li>The Rock Corner</li>
+                  <li>Winston's Burgers & Beer</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5 class="fade-in">THƯỞNG NGOẠN VẺ ĐẸP TINH TẾ TẠI SWAN RESORT</h5>
+          <h2 class="fade-in" >THƯ VIỆN ẢNH</h2>
+        </div>
+        <div class="button">
+          
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d502579.0921834064!2d103.62774923606239!3d10.229355551506051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a78c62b49eda17%3A0x8aa79fbbdd72cdb!2zUGjDuiBRdeG7kWM!5e0!3m2!1svi!2s!4v1713251883954!5m2!1svi!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="image/logo.png" style="width: 130px;">
+        <p class="fade-in" style="color: #f5f2f2; ;">
+          Hãy đến với Swan Resort của chúng tôi để thưởng thức những khoảnh khắc sang trọng và tuyệt vời bên bãi biển trong lành.
+        </p>
+
+        <p class="fade-in" style="color: #f5f2f2; ;">Các phương thức thanh toán</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3 class="fade-in">
+          <a href="tintuc.html" class="news-link">Tin Tức Gần Đây</a>
+      </h3>
+           
+        <ul>
+               <li class="fade-in">
+                  <a href="uudai.html" class="list-link">Ưu đãi khi đặt phòng trước</a>
+               </li>
+               <li class="fade-in">
+                  <a href="uudai.html" class="list-link">Ưu đãi cho khách hàng lưu trú lâu dài</a>
+               </li>
+               <li class="fade-in">
+                 <a href="uudai.html" class="list-link">Ưu đãi cho khách hàng thân thiết</a>
+               </li>
+               <li class="fade-in">
+                 <a href="uudai.html" class="list-link">Gói spa không giới hạn</a>
+               </li>
+    
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3 class="fade-in">
+          <a href="Moi.html" class="news-link">Dịch vụ</a>
+      </h3>
+      <li class="fade-in">
+        <a href="Moi.html" class="list-link">Nhà hàng</a>
+      </li>
+      <li class="fade-in">
+        <a href="Moi.html" class="list-link">Phòng cao cấp</a>
+      </li>
+      <li class="fade-in">
+        <a href="Moi.html" class="list-link">Spa</a>
+      </li>
+      <li class="fade-in">
+        <a href="Moi.html" class="list-link">Hoạt động giải trí</a>
+      </li>
+         
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3 class="fade-in">
+          <a href="lienhedp.html" class="news-link">Liên hệ</a>
+      </h3>
+
+        <ul>
+          <li class="fade-in">4107 phường 16 thống nhất Phú Quốc Kiên Giang Việt Nam</li>
+          <li class="fade-in"><i class="far fa-envelope"></i>swanresort@gmail.com</li>
+          <li class="fade-in"><i class="far fa-phone-alt"></i>0999999999</li>
+          <li class="fade-in"><i class="far fa-comments"></i>Dịch vụ liên hệ 24/7 </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
