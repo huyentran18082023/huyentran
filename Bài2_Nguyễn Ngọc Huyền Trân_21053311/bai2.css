@@ -1,0 +1,120 @@
+/* Reset các khoảng trống và viền */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Định dạng cho toàn bộ trang */
+body {
+    height: 100vh;
+    background: gainsboro;  /* Màu nền nhẹ nhàng */
+    overflow: hidden;  /* Ngăn cuộn trang */
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Căn giữa nội dung */
+}
+
+/* Định dạng khung chứa chính */
+.wrapper {
+    display: flex;
+    justify-content: center;  /* Căn giữa các hình ảnh */
+    gap: 20px;  /* Khoảng cách giữa các hình ảnh */
+}
+
+/* Định dạng cho các khung chứa hình ảnh */
+/* Định dạng khung chứa hình ảnh */
+.image {
+    width: 150px;  /* Độ rộng cố định của khung */
+    height: 150px;  /* Chiều cao cố định của khung */
+    border-radius: 4px;  /* Bo góc */
+    overflow: hidden;  /* Ngăn hình ảnh tràn ra ngoài */
+    cursor: pointer;  /* Con trỏ khi hover */
+    transition: 0.25s;  /* Hiệu ứng mượt mà */
+}
+
+/* Hiệu ứng khi phóng to hình ảnh */
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Đảm bảo hình ảnh không bị méo */
+    transition: transform 0.25s;  /* Chuyển động mượt mà khi hover */
+}
+
+.image:hover img {
+    transform: scale(1.2);  /* Phóng to nhưng không tràn ra ngoài */
+}
+
+
+/* Định dạng cho gallery (mô-đun pop-up) */
+/* Định dạng cho gallery */
+.gallery {
+    position: fixed;
+    width: 70%;  /* Kích thước chiều ngang của gallery */
+    height: 70%;  /* Kích thước chiều dọc của gallery */
+    background: rgba(0, 0, 0, 0.8);  /* Màu nền tối */
+    display: flex;
+    align-items: center;  /* Căn giữa nội dung */
+    justify-content: center; 
+    color: antiquewhite;  /* Màu chữ */
+    opacity: 0;  /* Độ trong suốt ban đầu */
+    pointer-events: none;  /* Ngăn tương tác */
+    transition: opacity 0.5s;  /* Hiệu ứng chuyển mượt */
+    top: 50%;  /* Căn giữa chiều dọc */
+    left: 50%;  /* Căn giữa chiều ngang */
+    transform: translate(-50%, -50%);  /* Đặt ở giữa */
+    overflow: hidden;  /* Ngăn tràn ra ngoài */
+}
+
+/* Định dạng khi gallery hiển thị */
+.show {
+    opacity: 1;  /* Hiển thị khi thêm lớp "show" */
+    pointer-events: auto;  /* Cho phép tương tác */
+}
+
+/* Định dạng cho hình ảnh bên trong gallery */
+.gallery_inner {
+    width: 120%;  /* Kích thước của nội dung bên trong gallery */
+    height: 120%;  /* Đảm bảo kích thước nhỏ hơn gallery */
+    padding: 10px;  /* Khoảng cách bên trong */
+    background: rgba(255, 255, 255, 0.1);  /* Màu nền nhẹ cho gallery_inner */
+    display: flex;
+    align-items: center;  /* Căn giữa nội dung */
+    justify-content: center;  /* Căn giữa hình ảnh */
+}
+
+.gallery_inner img {
+    max-width: 70%;  /* Kích thước tối đa của hình ảnh trong gallery_inner */
+    max-height: 70%;  /* Đảm bảo không vượt quá chiều cao */
+    object-fit: contain;  /* Giữ tỷ lệ hình ảnh */
+}
+
+/* Định dạng cho nút đóng */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;  /* Vị trí nút đóng */
+    font-size: 35px;  /* Kích thước lớn */
+    cursor: pointer;  /* Hiển thị con trỏ khi hover */
+}
+
+/* Định dạng cho nút điều hướng */
+.control {
+    font-size: 35px;
+    color: rgb(189, 135, 135);  /* Màu nhẹ */
+    position: absolute;
+    cursor: pointer;
+    top: 50%;  /* Đặt giữa chiều cao */
+    transform: translateY(-50%);  /* Đảm bảo căn giữa chiều dọc */
+}
+
+/* Vị trí nút điều hướng bên trái */
+.control.prev {
+    left: 10px;  /* Vị trí bên trái */
+}
+
+/* Vị trí nút điều khiển bên phải */
+.control.next {
+    right: 10px;  /* Vị trí bên phải */
+}
+
